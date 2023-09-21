@@ -8,5 +8,6 @@ jobs:
     steps:
       - run: git clone https://github.com/megrIm-sa/web_technologies
       - run: ls -a
+      - run: cd web_technologies
       - name: Print page
         run: cat index.html
