@@ -9,4 +9,4 @@ jobs:
       - run: git clone https://github.com/megrIm-sa/web_technologies
       - run: ls -a
       - name: Print page
-        run: cat web_technologies/index.html
+        run: open web_technologies/index.html
