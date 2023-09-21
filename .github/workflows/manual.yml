@@ -6,9 +6,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.1.0
-      # here is some step that generates HTML file with python
-      - run: sudo apt install tidy
-      - run: tidy page.html > page2.html
-      - name: Print generated page
-        run: cat page2.html
+      - run: git clone https://github.com/megrIm-sa/web_technologies
+      - run: ls -a
+      - name: Print page
+        run: cat index.html
