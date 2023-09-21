@@ -29,4 +29,6 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Run HTML
-      run: git clone https://github.com/megrIm-sa/web_technologies
+    - run: git clone https://github.com/megrIm-sa/web_technologies
+    - run: ls -a
+    - run: open index.html
