@@ -8,6 +8,7 @@ body {
 header {
     background-color: darkred;
     color: white;
+    height:auto;
 }  
 #left_img {
     float: left;
