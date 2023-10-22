@@ -8,8 +8,9 @@ body {
 header {
     background-color: darkred;
     color: white;
-    height:auto;
-}  
+    height: auto;
+}
+
 #left_img {
     float: left;
 }
@@ -22,11 +23,12 @@ header {
 
 footer {
     background-color: rgb(50, 50, 50);
-    background-size:100%;
+    background-size: 100%;
     color: lightgray;
 }
-footer > h2 {
-    color:aliceblue;
+
+footer>h2 {
+    color: aliceblue;
 }
 
 h1 {
@@ -38,7 +40,33 @@ h2 {
 }
 
 p {
-    font-size: 21px;
+    font-size: 16px;
+}
+
+.active,
+.accordion:hover {
+    background-color: #ccc;
+}
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }
 
 table {
@@ -50,9 +78,11 @@ table {
 a:link {
     color: dodgerblue;
 }
+
 a:visited {
     color: violet;
 }
+
 a:hover {
     color: mediumseagreen;
 }
@@ -65,4 +95,37 @@ ul {
     display: table;
     margin: 0 auto;
     font-weight: bold;
+}
+
+li.completed {
+    background-color: #d3ffd3;
+    text-decoration: line-through;
+}
+
+button.deleteButton {
+    position: relative;
+    left: 30px;
+}
+
+.cloak {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+
+    padding: 10px;
+    padding-left: 50%;
+    padding-right: 50%;
+    animation: cloakAnimation 2s infinite;
+}
+
+@keyframes cloakAnimation {
+
+    0%,
+    100% {
+        background-color: black;
+    }
+
+    50% {
+        background-color: whitesmoke;
+    }
 }
