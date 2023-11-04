@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Contact</title>
     <link rel="icon" type="image/x-icon" href="my_logo.png">
+    <script src="https://kit.fontawesome.com/66f248fc28.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -39,38 +40,37 @@
     </header><br><br>
 
     <div class="main-body">
-        <div class="container bg-body-secondary bg-opacity-25 container-sm" style="width: 50%">
-            <div style="margin-top: 40px">
-                <h4>To-Do List</h4>
-                <div>
-                    <input type="text" id="taskInput" placeholder="Add a new task">
-                    <button id="addTask" class="btn btn-light btn-sm">Add</button>
-                </div>
-                <ul id="taskList"></ul>
-            </div>
-            </section><br>
-            <script src="todo_list.js"></script>
+        <div class="container bg-body-secondary bg-opacity-25 container-sm" style="width: 50%; margin-bottom: 20px;">
+            <div><br>
+                <i class="fa-brands fa-twitter"></i>
+                <p>Twitter</p>
+                <a href="https://twitter.com/megrImGames" title="Twitter"
+                    target="_blank">https://twitter.com/megrImGames</a><br>
+            </div><br>
 
-            <div class="timer" style="margin-top: 20px">
-                <h4>Countdown Timer</h4>
-                <input type="number" id="duration" placeholder="Enter duration (in seconds)">
-                <button id="start" class="btn btn-light btn-sm">Start</button>
-                <div class="display" id="display">00:00</div>
-                <div id="cloak"></div>
-            </div>
+            <div><br>
+                <i class="fa-solid fa-circle-info"></i>
+                <p>Habr</p>
+                <a href="https://freelance.habr.com/freelancers/megrIm" title="Habr"
+                    target="_blank">https://freelance.habr.com/freelancers/megrIm</a><br>
+            </div><br>
+
+            <div><br>
+                <i class="fa-solid fa-envelope"></i>
+                <button type="button" onclick="notifyMe()">Send notification</button>
+                <form id="myForm">
+                    <p>Enter your email and we will contact you</p>
+                    <input id="email" placeholder="Enter email">
+                    <button type="submit" class="btn btn-light btn-sm">Submit</button>
+                </form>
+                <p></p>
+            </div><br>
+            <script src="form_validation.js"></script>
 
         </div>
     </div><br>
-    <script src="timer.js"></script>
     </div>
-    <div style="margin: 50px 90px;">
-        <p>Enter your email and we will contact you</p>
-        <form id="myForm">
-            <input id="email" placeholder="Enter email">
-            <button type="submit" class="btn btn-light btn-sm">Submit</button>
-        </form>
-    </div>
-    <script src="form_validation.js"></script>
+
 
     <footer>
         <section>
