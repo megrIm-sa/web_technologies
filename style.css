@@ -97,16 +97,6 @@ ul {
     font-weight: bold;
 }
 
-li.completed {
-    background-color: #d3ffd3;
-    text-decoration: line-through;
-}
-
-button.deleteButton {
-    position: relative;
-    left: 30px;
-}
-
 .cloak {
     width: 20px;
     height: 20px;
@@ -121,11 +111,40 @@ button.deleteButton {
 @keyframes cloakAnimation {
 
     0%,
-    100% {
-        background-color: black;
-    }
-
     50% {
         background-color: whitesmoke;
     }
+    100% {
+        background-color: black;
+    }
+}
+
+#quiz-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4%;
+}
+
+.gameName {
+    background-color: lightblue;
+    border: 1px solid lightgray;
+    padding: 10px;
+    margin: 10px;
+    min-width: 150px;
+    cursor: pointer;
+}
+
+.description {
+    background-color: whitesmoke;
+    border: 1px solid lightgray;
+    padding: 10px;
+    margin: 10px;
+}
+
+.correct {
+    background-color: green;
+    /* Green color for correct answers */
+    pointer-events: none;
+    /* Disable pointer events on correct answers */
 }

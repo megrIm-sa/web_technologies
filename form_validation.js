@@ -42,9 +42,8 @@ function notifyMe() {
     if (Notification.permission !== "granted")
         Notification.requestPermission();
     else {
-        console.log("notification showing");
-        var notification = new Notification('Notification title', {
-            body: "Hey there! You've been notified!",
+        var notification = new Notification('Email contact', {
+            body: "Thank you! We will contact you!",
         });
     }
 }

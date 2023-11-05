@@ -5,6 +5,7 @@
 -->
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -27,11 +28,6 @@
     </style>
 
     <header>
-        <!-- <section>
-            <img id="left_img" src="my_logo.png" width="84" height="84">
-            <h1>megrIm Games</h1>
-            <h3>Indie Game Developer</h3>
-        </section> -->
         <nav class="navbar navbar-expand-sm justify-content-center bg-dark">
             <div class="container-fluid">
                 <ul class="navbar-nav">
@@ -57,17 +53,23 @@
 
     <div class="main-body">
         <section>
-            <div class="container bg-body-secondary bg-opacity-25 container-sm" style="width: 50%">
+            <div class="container container-sm bg-body-secondary bg-opacity-25 " style="width: 70%">
                 <h2>Monki Flip:</h2>
                 <!-- Accordion -->
-                <button class="accordion"><h5>Description</h5></button>
+                <button class="accordion" onclick="playAudio()">
+                    <h5>Description</h5>
+                </button>
                 <div class="panel">
-                <p>Monki Flip was developed under the influence of the classic of the genre - Flappy Bird.
-                    Jump, maneuver and don't fall into the clutches of opponents!
-                    3 unique levels: jungle, cyberpunk city and vampire house!</p>
-                    <a href="https://yandex.com/games/app/235351?lang=en" class="btn btn-success" target="_blank">Play</a>
+                    <p>Monki Flip was developed under the influence of the classic of the genre - Flappy Bird.
+                        Jump, maneuver and don't fall into the clutches of opponents!
+                        3 unique levels: jungle, cyberpunk city and vampire house!</p>
+                    <a href="https://yandex.com/games/app/235351?lang=en" class="btn btn-success"
+                        onclick="popUp(this)" target="_blank">Play</a>
                     <br><br>
                 </div><br>
+                <audio id="audio">
+                    <source src="Text1.wav" type="audio/wav">
+                </audio>
                 <script src="script.js"></script>
 
 
