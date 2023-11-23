@@ -63,8 +63,8 @@
                     <p>Monki Flip was developed under the influence of the classic of the genre - Flappy Bird.
                         Jump, maneuver and don't fall into the clutches of opponents!
                         3 unique levels: jungle, cyberpunk city and vampire house!</p>
-                    <a href="https://yandex.com/games/app/235351?lang=en" class="btn btn-success"
-                        onclick="popUp(this)" target="_blank">Play</a>
+                    <a href="https://yandex.com/games/app/235351?lang=en" class="btn btn-success" onclick="popUp(this)"
+                        target="_blank">Play</a>
                     <br><br>
                 </div><br>
                 <audio id="audio">
@@ -107,6 +107,17 @@
                         <span class="carousel-control-next-icon"></span>
                     </button>
                 </div>
+
+                <!-- Video Trailer -->
+                <div><br>
+                    <button class="btn btn-success" onclick="openFullscreen();">Open Trailer</button>
+                    <video style="display: none;" width="100%" controls id="myvideo">
+                        <source src="trailer.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div><br>
+                <script src="fullscreenVideo.js"></script>
+
             </div><br>
         </section>
     </div><br><br>

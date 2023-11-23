@@ -1,32 +1,31 @@
-const formObject = {
-    formName: "myForm",
-    inputName: "email",
-    pattern: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+const form1 = document.getElementById("myForm1");
+const form2 = document.getElementById("myForm2");
 
-    checkPattern: function (input) {
-        let valid = true;
-        if (!formObject.pattern.test(input.value)) {
-            valid = false;
-            alert(`Enter a valid ${formObject.inputName}!`);
-        }
-        return valid;
-    },
-};
-
-const form = document.getElementById(formObject.formName);
-
-form.addEventListener("submit", function (event) {
-    const input = document.getElementById(formObject.inputName);
-    //console.log("input is"input);
-    if (!formObject.checkPattern(input)) {
+form1.addEventListener("submit", function (event) {
+    const input = document.getElementById("email");
+    
+    if (!checkPattern(input)) {
         event.preventDefault(); // Prevent form submission if there are validation errors
         return;
     }
-    var formSelect = document.querySelector('form');
-    formSelect.style.display = 'none';
-    formSelect.nextElementSibling.innerHTML = "Thank you! We will contact you!";
+    
+    event.preventDefault();
+    form1.nextElementSibling.style.display = "block";
+    form1.style.display = "none";
+});
+
+form2.addEventListener("submit", function (event) {
+    const input = document.getElementById("name");
+
+    if (input == "") {
+        event.preventDefault(); // Prevent form submission if there are validation errors
+        return;
+    }
+
+    event.preventDefault();
+    form2.nextElementSibling.innerHTML = "Thank you! We will contact you!";
     notifyMe();
-})
+});
 
 document.addEventListener('DOMContentLoaded', function () {
     if (!Notification) {
@@ -46,4 +45,15 @@ function notifyMe() {
             body: "Thank you! We will contact you!",
         });
     }
-}
+};
+
+function checkPattern (input) {
+    let valid = true;
+    var pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+    if (!pattern.test(input.value)) {
+        valid = false;
+        alert(`Enter a valid email!`);
+    }
+    return valid;
+};
